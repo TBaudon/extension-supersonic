@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.haxe.extension.extension_supersonic" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.haxe.extension.supersonic" >
 	
+	<uses-sdk android:minSdkVersion="::ANDROID_MINIMUM_SDK_VERSION::"/>
 	
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+	<application>
+		
+		<activity
+			android:name="com.supersonicads.sdk.controller.ControllerActivity"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true" />
+
+		<activity
+			android:name="com.supersonicads.sdk.controller.InterstitialActivity"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true"
+			android:theme="@android:style/Theme.Translucent" />
+
+		<activity
+			android:name="com.supersonicads.sdk.controller.OpenUrlActivity"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true"
+			android:theme="@android:style/Theme.Translucent" />
+	
+	</application>	
 	
 </manifest>

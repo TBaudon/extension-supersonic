@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<ndll name="extension_supersonic" />
+	<ndll name="extension_supersonic" if="ios" />
 	
 	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	<section if="android">
+		
+		<dependency name="extension-supersonic" path="dependencies/android" />
+		<android extension="org.haxe.extension.supersonic.ExtensionSupersonic"/>
 	
-	<dependency name="extension_supersonic" path="dependencies/android" if="android" />
-	<android extension="org.haxe.extension.supersonic.Supersonic" />
+	</section>
 	
 </project>
